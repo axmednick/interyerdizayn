@@ -65,14 +65,14 @@
                         <div class="tp-caption   tp-resizeme" id="slide-74-layer-4"
                              data-x="['left','left','left','center']" data-hoffset="['60','60','30','0']"
                              data-y="['middle','middle','middle','top']" data-voffset="['10','10','10','230']"
-                             data-fontsize="['64','64','60','40']" data-lineheight="['74','74','70','50']"
+                             data-fontsize="['40','40','30','20']" data-lineheight="['74','74','70','50']"
                              data-width="['700','700','700','700']" data-height="none" data-whitespace="normal"
                              data-type="text" data-responsive_offset="on" data-frames='[{"delay":200,"speed":750,"sfxcolor":"#fff","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},
                                 {"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
                              data-textAlign="['left','left','left','center']" data-paddingtop="[20,20,20,20]"
                              data-paddingright="[20,20,20,10]" data-paddingbottom="[30,30,30,30]"
                              data-paddingleft="[0,0,0,10]"
-                             style="z-index: 10; text-transform:uppercase; letter-spacing:10px; white-space: normal;font-weight: 600; color: #fff;font-family: 'Poppins', sans-serif;">{{$slider->sub_title}}</div>
+                             style="z-index: 10; text-transform:uppercase; letter-spacing:10px; white-space: normal;font-weight: 600; color: #fff;font-family: 'Poppins', sans-serif; font-size: 10px !important;">{{$slider->sub_title}}</div>
 
                         <!-- LAYER 5  Paragraph-->
                         <div class="tp-caption   tp-resizeme" id="slide-74-layer-5"
@@ -96,7 +96,7 @@
                                 {"delay":"wait","speed":500,"to":"y:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power1.easeIn"}]'
                                  data-textAlign="['left','left','left','center']" data-paddingtop="[0,0,0,0]"
                                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]" style="z-index:9; line-height:30px;"><a
+                                 data-paddingleft="[0,0,0,0]" style="z-index:9; line-height:30px; font-family: 'Open Sans';"><a
                                     href="{{$slider->button_url}}"
                                     class="site-button-secondry btn-half"><span> {{$slider->button_text}}</span></a>
                             </div>

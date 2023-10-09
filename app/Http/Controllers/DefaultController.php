@@ -77,7 +77,7 @@ class DefaultController extends Controller
     public function serviceDetail($slug){
 
         return view('serviceDetail',[
-            'service' => Service::where('slug',$slug)->fist()
+            'service' => Service::where('slug',$slug)->first()
         ]);
     }
 

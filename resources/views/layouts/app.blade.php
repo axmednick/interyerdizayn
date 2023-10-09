@@ -60,7 +60,7 @@
                             <li><a>{{ __('content.services') }}</a>
                                 <ul>
                                     @foreach($services as $service)
-                                        <li><a href="{{ route('serviceDetail', $service->id) }}">{{ $service->name }}</a></li>
+                                        <li><a href="{{ route('serviceDetail', $service->slug)}}">{{ $service->name }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
@@ -156,7 +156,7 @@
                             <div class="nav-footer">
                                 <ul>
                                     @foreach($services as $service)
-                                        <li><a href="{{ route('serviceDetail', $service->slug }}">{{ $service->name }}</a></li>
+                                        <li><a href="{{ route('serviceDetail', $service->slug)}}">{{ $service->name }}</a></li>
                                     @endforeach
                                 </ul>
                             </div>
