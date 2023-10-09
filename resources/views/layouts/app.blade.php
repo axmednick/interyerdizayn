@@ -156,7 +156,7 @@
                             <div class="nav-footer">
                                 <ul>
                                     @foreach($services as $service)
-                                        <li><a href="{{ route('serviceDetail', \Illuminate\Support\Str::slug($service->name)) }}">{{ $service->name }}</a></li>
+                                        <li><a href="{{ route('serviceDetail', $service->slug }}">{{ $service->name }}</a></li>
                                     @endforeach
                                 </ul>
                             </div>
