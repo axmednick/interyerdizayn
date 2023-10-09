@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="{{route('index')}}">Home</a><span>»</span><span>{{$service->name}}</span>
+                    <a href="{{route('index')}}">{{trans('content.home')}}</a><span>»</span><span>{{$service->name}}</span>
                 </div>
             </div>
         </div>

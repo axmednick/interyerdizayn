@@ -22,8 +22,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title ml-3">
-                <h3>Have a Question?</h3>
-                <h2>CONTACT US</h2>
+                <h3>{{__('content.have_a_questions')}}</h3>
+                <h2>{{__('content.contact_us')}}</h2>
             </div>
             <div class="row">
                 <div class="col-md-8">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 info-touch">
-                    <h4>Keep In Touch</h4>
+
                     <div class="my-info">
                         <div class="in1">
                             <div class="address">

@@ -74,7 +74,10 @@ class DefaultController extends Controller
         ]);
     }
 
-    public function serviceDetail($id){
+    public function serviceDetail($slug){
+
+
+
         return view('serviceDetail',[
             'service' => Service::findOrFail($id)
         ]);

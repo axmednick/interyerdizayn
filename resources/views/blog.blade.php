@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="index.html">Home</a><span>»</span><span>BLOG</span>
+                    <a href="{{route('index')}}">{{__('content.home')}}</a><span>»</span><span>{{__('content.blog')}}</span>
                 </div>
             </div>
         </div>

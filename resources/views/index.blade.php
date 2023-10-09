@@ -111,7 +111,7 @@
                              data-textAlign="['left','left','left','left']" data-paddingtop="[250,250,250,250]"
                              data-paddingright="[250,150,150,150]" data-paddingbottom="[250,250,250,250]"
                              data-paddingleft="[250,150,250,250]"
-                             style="z-index: 6; width:6000px;background-color:{{$slider->color}} ;height:100vh;"></div>
+                             style="z-index: 6; width:6000px;background-color:{{$slider->color}} ;height:100vh; opacity: 0.4 !important;"></div>
 
                         <!-- Border left Part -->
                         <div class="tp-caption tp-shape tp-shapewrapper " id="slide-74-layer-8"
@@ -177,12 +177,11 @@
     <section class="recently portfolio bg-white-3">
         <div class="container-fluid recently-slider">
             <div class="section-title">
-                <h3>Son işlərimiz</h3>
-                <h2>Works</h2>
+                <h3>@lang('content.recent_works_title')</h3>
+                <h2>@lang('content.works')</h2>
             </div>
             <div class="portfolio right-slider">
                 <div class="owl-carousel home5-right-slider">
-
                     @foreach($projects as $project)
                         <a href="{{route('projectDetail',$project->id)}}" class="recent-16" data-aos="fade-up">
                             <div class="recent-img16 img-center"
@@ -190,9 +189,8 @@
                             <div class="recent-content"></div>
                             <div class="recent-details">
                                 <div class="recent-title">{{$project->title}}</div>
-
                             </div>
-                            <div class="view-proper">Daha ətraflı</div>
+                            <div class="view-proper">@lang('content.view_details')</div>
                         </a>
                     @endforeach
                 </div>
@@ -201,72 +199,6 @@
     </section>
     <!-- END SECTION RECENTLY WORKS -->
 
-    <!-- START SECTION INFO-HELP -->
-    <section class="info-help h18">
-        <div class="container">
-            <div class="row info-head">
-                <div class="col-lg-12 col-md-8 col-xs-8">
-                    <div class="info-text" data-aos="fade-up">
-                        <h3 class="text-center mb-0">Why Choose Us</h3>
-                        <p class="text-center mb-4 p-0">We offer perfect interior services</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECTION INFO-HELP -->
-
-    <!-- START SECTION INFO -->
-    <section _ngcontent-bgi-c3="" class="featured-boxes-area">
-        <div _ngcontent-bgi-c3="" class="container">
-            <div _ngcontent-bgi-c3="" class="featured-boxes-inner">
-                <div _ngcontent-bgi-c3="" class="row m-0">
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon color-fb7756"><img src="images/icons/i-5.svg"
-                                                                                     width="85" height="85" alt="">
-                            </div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">Interior for Home</h3>
-                            <p _ngcontent-bgi-c3="">Lorem ipsum suspendisse ultrices gravida. Risus commodo viverra
-                                maecenas accumsan.</p><a _ngcontent-bgi-c3="" class="read-more-btn"
-                                                         href="project-details.html">Read More</a></div>
-                    </div>
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon color-facd60"><img src="images/icons/i-6.svg"
-                                                                                     width="85" height="85" alt="">
-                            </div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">Trusted by thousands</h3>
-                            <p _ngcontent-bgi-c3="">Lorem ipsum suspendisse ultrices gravida. Risus commodo viverra
-                                maecenas accumsan.</p><a _ngcontent-bgi-c3="" class="read-more-btn"
-                                                         href="project-details.html">Read More</a></div>
-                    </div>
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon color-1ac0c6"><img src="images/icons/i-7.svg"
-                                                                                     width="85" height="85" alt="">
-                            </div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">Financing made easy</h3>
-                            <p _ngcontent-bgi-c3="">Lorem ipsum suspendisse ultrices gravida. Risus commodo viverra
-                                maecenas accumsan.</p><a _ngcontent-bgi-c3="" class="read-more-btn"
-                                                         href="project-details.html">Read More</a></div>
-                    </div>
-                    <div _ngcontent-bgi-c3="" class="col-lg-3 col-sm-6 col-md-6 p-0" data-aos="fade-up">
-                        <div _ngcontent-bgi-c3="" class="single-featured-box">
-                            <div _ngcontent-bgi-c3="" class="icon"><img src="images/icons/i-8.svg" width="85"
-                                                                        height="85" alt=""></div>
-                            <h3 _ngcontent-bgi-c3="" class="mt-5">24/7 support</h3>
-                            <p _ngcontent-bgi-c3="">Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                                maecenas accumsan.</p><a _ngcontent-bgi-c3="" class="read-more-btn"
-                                                         href="project-details.html">Read More</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECTION INFO -->
-
-    <!-- START SECTION PROJECTS -->
     <section class="portfolio bg-white-5">
         <div class="container">
             <div class="section-title">
@@ -296,205 +228,72 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-text">
-                                <a href="#"><h4>Project</h4></a>
-                            </div>
+
                         </div>
                     </div>
                 @endforeach
                 <div class="item col-lg-4 col-sm-6 col-xs-12 landscapes last-item two"></div>
             </div>
         </div>
-        <div class="box bg-3 mt-0">
-            <a href="wide-no-gutter-project-4.html"
-               class="button button--wayra button--border-thick button--text-upper button--size-s">View All</a>
-        </div>
-    </section>
-    <!-- END SECTION PROJECTS -->
 
-    <!-- START SECTION INFO-HELP -->
+    </section>
+
+
+
+
+    <!-- Daha fazla kodlar burada -->
+
     <section class="info-help h17">
         <div class="container">
             <div class="row info-head">
                 <div class="col-lg-6 col-md-8 col-xs-8" data-aos="fade-right">
                     <div class="info-text">
-                        <h3>Living room design</h3>
-                        <h5 class="mt-3">Price: $400</h5>
-                        <p class="pt-2">We Help you design the best places and offer near you. Bring to the table
-                            win-win survival strategies to ensure proactive domination going forward.</p>
+                        <h3>@lang('content.contact_us_title')</h3>
+
+                        <p class="pt-2">
+                            @lang('content.contact_us_description')
+                        </p>
                         <div class="inf-btn pro">
-                            <a href="contact.html" class="btn btn-pro btn-secondary btn-lg">Get Started</a>
+                            <a href="contact.html" class="btn btn-pro btn-secondary btn-lg">@lang('content.contact_us_button')</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- END SECTION INFO-HELP -->
 
-    <!-- START SECTION TESTIMONIALS -->
-    <section class="testimonials bg-white-3">
-        <div class="container">
-            <div class="section-title">
-                <h3>Happy</h3>
-                <h2>Customers</h2>
-            </div>
-            <div class="owl-carousel style1">
-                <div class="test-1" data-aos="zoom-in">
-                    <h3>Lisa Smith</h3>
-                    <img src="images/testimonials/ts-1.jpg" alt="">
-                    <h6 class="mt-2">New York</h6>
-                    <ul class="starts text-center mb-2">
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec,
-                        suscipit tortor et sapien donec.</p>
-                </div>
-                <div class="test-1" data-aos="zoom-in">
-                    <h3>Jhon Morris</h3>
-                    <img src="images/testimonials/ts-2.jpg" alt="">
-                    <h6 class="mt-2">Los Angeles</h6>
-                    <ul class="starts text-center mb-2">
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star-o"></i>
-                        </li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec,
-                        suscipit tortor et sapien donec.</p>
-                </div>
-                <div class="test-1" data-aos="zoom-in">
-                    <h3>Mary Deshaw</h3>
-                    <img src="images/testimonials/ts-3.jpg" alt="">
-                    <h6 class="mt-2">Chicago</h6>
-                    <ul class="starts text-center mb-2">
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec,
-                        suscipit tortor et sapien donec.</p>
-                </div>
-                <div class="test-1" data-aos="zoom-in">
-                    <h3>Gary Steven</h3>
-                    <img src="images/testimonials/ts-4.jpg" alt="">
-                    <h6 class="mt-2">Philadelphia</h6>
-                    <ul class="starts text-center mb-2">
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star-o"></i>
-                        </li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec,
-                        suscipit tortor et sapien donec.</p>
-                </div>
-                <div class="test-1" data-aos="zoom-in">
-                    <h3>Cristy Mayer</h3>
-                    <img src="images/testimonials/ts-5.jpg" alt="">
-                    <h6 class="mt-2">San Francisco</h6>
-                    <ul class="starts text-center mb-2">
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec,
-                        suscipit tortor et sapien donec.</p>
-                </div>
-                <div class="test-1" data-aos="zoom-in">
-                    <h3>Ichiro Tasaka</h3>
-                    <img src="images/testimonials/ts-6.jpg" alt="">
-                    <h6 class="mt-2">Houston</h6>
-                    <ul class="starts text-center mb-2">
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star-o"></i>
-                        </li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec,
-                        suscipit tortor et sapien donec.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECTION TESTIMONIALS -->
-
-    <!-- START SECTION BLOG -->
     <section class="blog-section bg-white-5">
         <div class="container">
             <div class="section-title">
-                <h3>Latest</h3>
-                <h2>News</h2>
+                <h3>@lang('content.latest_news_title')</h3>
+                <h2>@lang('content.news')</h2>
             </div>
             <div class="news-wrap">
                 <div class="row">
                     @foreach($blogs as $blog)
-                    <div class="col-xl-6 col-md-12 col-xs-12" data-aos="fade-right">
-                        <div class="news-item news-item-sm">
-                            <a href="{{route('blogDetail',$blog->id)}}" class="news-img-link">
-                                <div class="news-item-img">
-                                    <img class="resp-img" src="{{$blog->getFirstMediaUrl('main')}}" alt="blog image">
-                                </div>
-                            </a>
-                            <div class="news-item-text">
-                                <a href="{{route('blogDetail',$blog->id)}}"><h3>{{$blog->title}}</h3></a>
-                                <span class="date">{{$blog->created_at->format('Y-m-d')}}</span>
-                                <div class="news-item-descr">
-                                    <p>{{substr($blog->description,0,90)}}....</p>
-                                </div>
-                                <div class="news-item-bottom">
-                                    <a href="{{route('blogDetail',$blog->id)}}" class="news-link">Read more...</a>
-
+                        <div class="col-xl-6 col-md-12 col-xs-12" data-aos="fade-right">
+                            <div class="news-item news-item-sm">
+                                <a href="{{route('blogDetail',$blog->id)}}" class="news-img-link">
+                                    <div class="news-item-img">
+                                        <img class="resp-img" src="{{$blog->getFirstMediaUrl('main')}}" alt="blog image">
+                                    </div>
+                                </a>
+                                <div class="news-item-text">
+                                    <a href="{{route('blogDetail',$blog->id)}}"><h3>{{$blog->title}}</h3></a>
+                                    <span class="date">{{$blog->created_at->format('Y-m-d')}}</span>
+                                    <div class="news-item-descr">
+                                        <p>{{substr($blog->description,0,90)}}....</p>
+                                    </div>
+                                    <div class="news-item-bottom">
+                                        <a href="{{route('blogDetail',$blog->id)}}" class="news-link">@lang('content.read_more')</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- END SECTION BLOG -->
 
 @endsection

@@ -13,12 +13,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 
 */
-
-Route::get('/',[DefaultController::class,'index'])->name('index');
-Route::get('/about',[DefaultController::class,'about'])->name('about');
-Route::get('/projectDetail/{id}',[DefaultController::class,'projectDetail'])->name('projectDetail');
-Route::get('/projects',[DefaultController::class,'projects'])->name('projects');
-Route::get('/blog',[DefaultController::class,'blog'])->name('blog');
-Route::get('/blog/{id}',[DefaultController::class,'blogDetail'])->name('blogDetail');
-Route::get('/service/{id}',[DefaultController::class,'serviceDetail'])->name('serviceDetail');
-Route::get('/contact',[DefaultController::class,'contact'])->name('contact');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+    Route::get('/', [DefaultController::class, 'index'])->name('index');
+    Route::get('/about', [DefaultController::class, 'about'])->name('about');
+    Route::get('/projectDetail/{id}', [DefaultController::class, 'projectDetail'])->name('projectDetail');
+    Route::get('/projects', [DefaultController::class, 'projects'])->name('projects');
+    Route::get('/blog', [DefaultController::class, 'blog'])->name('blog');
+    Route::get('/blog/{id}', [DefaultController::class, 'blogDetail'])->name('blogDetail');
+    Route::get('/service/{slug}', [DefaultController::class, 'serviceDetail'])->name('serviceDetail');
+    Route::get('/contact', [DefaultController::class, 'contact'])->name('contact');
+});

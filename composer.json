@@ -78,7 +78,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://nova.laravel.com"
+            "url": "https://laravelsatis.com"
         }
     ],
     "minimum-stability": "stable",

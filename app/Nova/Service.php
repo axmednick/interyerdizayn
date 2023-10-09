@@ -47,6 +47,7 @@ class Service extends Resource
         return [
             ID::make()->sortable(),
             Images::make('image'),
+            Text::make('Slug'),
             NovaTabTranslatable::make([
                 Text::make('Name'),
                 Textarea::make('Description'),

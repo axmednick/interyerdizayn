@@ -1,9 +1,10 @@
 @extends('layouts.app')
+
 @section('content')
     <section class="headings">
         <div class="text-heading">
             <div class="container">
-                <h1 class="text-center">About Us</h1>
+                <h1 class="text-center">{{ __('content.index') }}</h1>
             </div>
         </div>
     </section>
@@ -11,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="index.html">Home</a><span>»</span><span>About Us</span>
+                    <a href="{{ route('index') }}">{{ __('content.home') }}</a><span> » </span><span>{{ __('content.about_us') }}</span>
                 </div>
             </div>
         </div>
@@ -23,20 +24,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 who">
-                    <img src="images/bg/about-us.jpg" alt="">
+                    <img src="images/bg/about-us.jpg" alt="{{ __('content.about_us') }}">
                 </div>
                 <div class="col-md-6 who-1">
                     <div>
-                        <h2 class="text-left mb-4">About <span>Interior</span></h2>
+                        <h2 class="text-left mb-4"><span>{{ __('content.aksent_interior') }}</span></h2>
                     </div>
                     <div class="pftext">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
-                    </div>
-                    <div class="box bg-2">
-                        <a href="about.html" class="button button--wayra button--border-thick button--text-upper button--size-s mb-5 mt-4">read More</a>
-                        <img src="images/signature.png" class="ml-5" alt="">
+                        <p>
+                            "{{ __('content.aksent_interior_description') }}"
+                        </p>
                     </div>
                 </div>
             </div>

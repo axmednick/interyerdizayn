@@ -3,7 +3,7 @@
     <section class="headings">
         <div class="text-heading">
             <div class="container">
-                <h1 class="text-center">About Us</h1>
+                <h1 class="text-center">{{__('content.works')}}</h1>
             </div>
         </div>
     </section>
@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="index.html">Home</a><span>»</span><span>About Us</span>
+                    <a href="{{route('index')}}">{{__('content.home')}}</a><span>»</span><span>{{__('content.works')}}</span>
                 </div>
             </div>
         </div>
@@ -20,8 +20,8 @@
     <section class="recently portfolio bg-white-3">
         <div class="container-fluid recently-slider">
             <div class="section-title text-center">
-                <h3>Son işlərimiz</h3>
-                <h2>Works</h2>
+                <h3>{{__('content.recent_works_title')}}</h3>
+                <h2>{{__('content.works')}}</h2>
             </div>
 
             <div class="row">
@@ -35,7 +35,7 @@
                                 <div class="recent-title">{{$project->title}}</div>
 
                             </div>
-                            <div class="view-proper">Daha ətraflı</div>
+                            <div class="view-proper">{{__('content.view_details')}}</div>
                         </a>
                     </div>
 

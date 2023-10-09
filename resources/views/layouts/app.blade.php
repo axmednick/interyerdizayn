@@ -1,7 +1,5 @@
 <!DOCTYPE HTML>
 <html class="no-js" lang="{{app()->getLocale()}}">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,15 +26,12 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link href="/css/menu.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-
 </head>
-
-<body class=" {{Route::is('index') ? "homepage-1 int_white_bg" : "inner-page"}}">
+<body class="{{ Route::is('index') ? 'homepage-1 int_white_bg' : 'inner-page' }}">
 <!-- Wrapper -->
 <div id="wrapper" class="int_main_wraapper">
     <!-- START SECTION HEADINGS -->
-    <!-- Header Container
-    ================================================== -->
+    <!-- Header Container ================================================== -->
     <header id="header-container" class="header head-tr">
         <!-- Header -->
         <div id="header" class="head-tr bottom">
@@ -45,172 +40,163 @@
                 <div class="left-side">
                     <!-- Logo -->
                     <div id="logo" class="col-lg-2 logo-white">
-                        <a href="{{route('index')}}">
-                            <img src="/logo.png"/>
+                        <a href="{{ route('index') }}">
+                            <img src="/logo.png" />
                         </a>
                     </div>
                     <!-- Mobile Navigation -->
                     <div class="mmenu-trigger">
                         <button class="hamburger hamburger--collapse" type="button">
                                 <span class="hamburger-box">
-							<span class="hamburger-inner"></span>
+                                    <span class="hamburger-inner"></span>
                                 </span>
                         </button>
                     </div>
                     <!-- Main Navigation -->
                     <nav id="navigation" class="style-1 head-tr">
                         <ul id="responsive">
-                            <li><a href="{{route('index')}}">Əsas səhifə</a>
-                            <li><a href="">Haqqımızda</a>
-
-                            </li>
-                            <li><a >Xidmətlər</a>
+                            <li><a href="{{ route('index') }}">{{ __('content.home') }}</a></li>
+                            <li><a href="{{ route('about') }}">{{ __('content.about') }}</a></li>
+                            <li><a>{{ __('content.services') }}</a>
                                 <ul>
-                                    @foreach($services as  $service)
-                                    <li><a href="{{route('serviceDetail',$service->id)}}">{{$service->name}}</a></li>
+                                    @foreach($services as $service)
+                                        <li><a href="{{ route('serviceDetail', $service->id) }}">{{ $service->name }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
-                            <li><a href="{{route('projects')}}">Layihələr</a></li>
-                            <li><a href="{{route('blog')}}">Bloq</a></li>
-                            <li><a href="{{route('contact')}}">Əlaqə</a></li>
+                            <li><a href="{{ route('projects') }}">{{ __('content.projects') }}</a></li>
+                            <li><a href="{{ route('blog') }}">{{ __('content.blog') }}</a></li>
+                            <li><a href="{{ route('contact') }}">{{ __('content.contact') }}</a></li>
+
+
+                            <li><a>{{mb_strtoupper(app()->getLocale())}}</a>
+                                <ul>
+
+                                        <li><a href="{{ LaravelLocalization::getLocalizedURL('az', null, [], true) }}">Azərbaycan</a></li>
+                                        <li><a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a></li>
+                                        <li><a href="{{ LaravelLocalization::getLocalizedURL('ru', null, [], true) }}">Pусский</a></li>
+
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
                     <div class="clearfix"></div>
                     <!-- Main Navigation / End -->
                 </div>
                 <!-- Left Side Content / End -->
-
             </div>
         </div>
         <!-- Header / End -->
-
     </header>
     <div class="clearfix"></div>
     <!-- Header Container / End -->
-@yield('content')
-
+    @yield('content')
     <!-- STAR SECTION PARTNERS -->
     <div class="partners bg-white-3 border-0" data-aos="zoom-in">
         <div class="container">
             <div class="owl-carousel style2">
-                <div class="owl-item"><img src="images/partners/1.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/2.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/3.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/4.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/5.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/6.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/7.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/8.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/9.png" alt=""></div>
-                <div class="owl-item"><img src="images/partners/10.png" alt=""></div>
+                @foreach($partners as $partner)
+                <div class="owl-item"><img src="{{$partner->getFirstMediaUrl('image')}}" alt=""></div>
+                @endforeach
+
             </div>
         </div>
     </div>
     <!-- END SECTION PARTNERS -->
-
     <!-- START FOOTER -->
     <footer class="first-footer">
-        <div class="top-footer bg-white-5 {{Route::is('index') ? "bg-white-5" : "bg-black-2"}}">
+        <div class="top-footer bg-white-5 {{ Route::is('index') ? 'bg-white-5' : 'bg-black-2' }}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="netabout">
-                            <a href="index.html" class="logo">
-                                <img src="images/logo-black.svg" alt="netcom">
+                            <a href="{{ route('index') }}" class="logo">
+                                <img src="/logo.png" alt="netcom">
                             </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laborios.</p>
                         </div>
                         <div class="contactus">
                             <ul>
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <p class="in-p">95 South Park Avenue, USA</p>
+                                        <p class="in-p">{{ $setting->address }}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <p class="in-p">+456 875 369 208</p>
+                                        <p class="in-p">{{ $setting->whatsapp }}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        <p class="in-p ti">support@interior.com</p>
+                                        <p class="in-p ti">{{ $setting->email }}</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-2 col-md-6">
                         <div class="navigation">
-                            <h3>Navigation</h3>
+                            <h3>{{ __('content.pages') }}</h3>
                             <div class="nav-footer">
                                 <ul>
-                                    <li><a href="index.html">Home One</a></li>
-                                    <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                    <li><a href="properties-full-list.html">Properties List</a></li>
-                                    <li><a href="properties-details.html">Property Details</a></li>
-                                    <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
-                                </ul>
-                                <ul class="nav-right">
-                                    <li><a href="agent-details.html">Agents Details</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="blog.html">Blog Default</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                    <li class="no-mgb"><a href="contact-us.html">Contact Us</a></li>
+                                    <li><a href="{{ route('about') }}">{{ __('content.about') }}</a></li>
+                                    <li><a href="{{ route('projects') }}">{{ __('content.projects') }}</a></li>
+                                    <li><a href="{{ route('blog') }}">{{ __('content.blog') }}</a></li>
+                                    <li><a href="{{ route('contact') }}">{{ __('content.contact') }}</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-2 col-md-6">
+                        <div class="navigation">
+                            <h3>{{ __('content.services') }}</h3>
+                            <div class="nav-footer">
+                                <ul>
+                                    @foreach($services as $service)
+                                        <li><a href="{{ route('serviceDetail', \Illuminate\Support\Str::slug($service->name)) }}">{{ $service->name }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
                         <div class="widget">
-                            <h3>Twitter Feeds</h3>
+                            <h3>{{ __('content.latest_projects') }}</h3>
                             <div class="twitter-widget contuct">
                                 <div class="twitter-area">
-                                    <div class="single-item">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    @foreach($lastProjects as $lastProject)
+                                        <div class="single-item">
+                                            <div class="icon-holder">
+                                                <i class="fa fa-file-alt" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h5><a href="{{ route('projectDetail', $lastProject->id) }}">{{ $lastProject->title }}</a></h5>
+                                                <h4>
+                                                    @php
+                                                        $monthNumber = \Carbon\Carbon::parse($lastProject->created_at)->format('n');
+                                                    @endphp
+                                                    {{ \Carbon\Carbon::parse($lastProject->created_at)->format('j') . ' ' . __('dates.' . $monthNumber) . ' ' . \Carbon\Carbon::parse($lastProject->created_at)->format('Y') }}
+                                                </h4>
+                                            </div>
                                         </div>
-                                        <div class="text">
-                                            <h5><a href="#">@interior</a> all share them with me baby said inspet.</h5>
-                                            <h4>about 5 days ago</h4>
-                                        </div>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h5><a href="#">@interior</a> all share them with me baby said inspet.</h5>
-                                            <h4>about 5 days ago</h4>
-                                        </div>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="text">
-                                            <h5><a href="#">@interior</a> all share them with me baby said inspet.</h5>
-                                            <h4>about 5 days ago</h4>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="newsletters">
-                            <h3>Newsletters</h3>
-                            <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
+                            <h3>{{ __('content.subscribe_newsletter') }}</h3>
+                            <p>{{ __('content.subscribe_description') }}</p>
                         </div>
                         <form class="bloq-email mailchimp form-inline" method="post">
                             <label for="subscribeEmail" class="error"></label>
                             <div class="email">
-                                <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email">
-                                <input type="submit" value="Subscribe">
+                                <input type="email" id="subscribeEmail" name="EMAIL" placeholder="{{ __('content.subscribe_email_placeholder') }}">
+                                <input type="submit" value="{{ __('content.subscribe_button') }}">
                                 <p class="subscription-success"></p>
                             </div>
                         </form>
@@ -220,15 +206,12 @@
         </div>
         <div class="second-footer bg-white-3">
             <div class="container">
-                <p>2021 © Copyright - All Rights Reserved.</p>
-                <p>Made With <i class="fa fa-heart" aria-hidden="true"></i> By Code-Theme</p>
+                <p>{{ __('content.copyright') }}</p>
             </div>
         </div>
     </footer>
-
     <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
     <!-- END FOOTER -->
-
     <!-- START PRELOADER -->
     <div id="preloader">
         <div id="status">
@@ -236,7 +219,6 @@
         </div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- ARCHIVES JS -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/tether.min.js"></script>
@@ -254,7 +236,6 @@
     <script src="/js/lightcase.js"></script>
     <script src="/js/owl.carousel.js"></script>
     <script src="/js/jquery.waypoints.min.js"></script>
-
     <!-- Slider Revolution scripts -->
     <script src="/revolution/js/jquery.themepunch.tools.min.js"></script>
     <script src="/revolution/js/jquery.themepunch.revolution.min.js"></script>
@@ -267,7 +248,6 @@
     <script src="/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <script src="/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
     <script src="/revolution/js/extensions/revolution.extension.video.min.js"></script>
-
     <script>
         var tpj = jQuery;
         var revapi26;
@@ -295,7 +275,6 @@
                             swipe_direction: "horizontal",
                             drag_block_vertical: false
                         },
-
                         arrows: {
                             style: "metis",
                             enable: true,
@@ -363,7 +342,7 @@
                     }
                 });
             }
-        }); /*ready*/
+        });
 
     </script>
     <script>
@@ -414,11 +393,11 @@
         });
 
     </script>
-
     <!-- MAIN JS -->
     <script src="/js/script.js"></script>
-
 </div>
 <!-- Wrapper / End -->
 </body>
+
 </html>
+

@@ -309,7 +309,7 @@ a.button.border, a.button {
     color: #fff;
 }
 #navigation.style-1.head-tr ul li a {
-    color: #fff;
+    color: #686363;
 }
 #navigation.style-2.cloned .sticky-logo {
     display: inline-block;
@@ -345,9 +345,10 @@ a.button.border, a.button {
 element.style {
 }
 .head-tr.bottom {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgb(255 255 255 / 78%);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* COLOR: RED; */
 }
 /*-----------------------------------*/
 /*------ HEADER TOP ------*/
