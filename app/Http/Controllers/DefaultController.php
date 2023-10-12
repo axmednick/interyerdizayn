@@ -27,7 +27,7 @@ class DefaultController extends Controller
                 if ($count < $limit) {
                     $portfolioImages->push([
                         'slug' => $category->slug,
-                        'image' => $media->getUrl()
+                        'image' => $media->getUrl('optimize')
                     ]);
                     $count++;
                 } else {

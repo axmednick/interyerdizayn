@@ -17,5 +17,6 @@ class Category extends Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('image');
+        $this->addMediaConversion('optimize')->quality(50);
     }
 }

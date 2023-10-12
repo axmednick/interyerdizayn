@@ -18,6 +18,7 @@ class Project extends Model implements HasMedia
     {
         $this->addMediaCollection('main')->singleFile();
         $this->addMediaCollection('image');
+        $this->addMediaConversion('optimize')->quality(50);
     }
 
     public function category(){
