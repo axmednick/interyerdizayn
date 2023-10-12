@@ -96,7 +96,7 @@
                                 {"delay":"wait","speed":500,"to":"y:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power1.easeIn"}]'
                                  data-textAlign="['left','left','left','center']" data-paddingtop="[0,0,0,0]"
                                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]" style="z-index:9; line-height:30px; font-family: 'Open Sans';"><a
+                                 data-paddingleft="[0,0,0,0]" style="z-index:9; line-height:30px; font-family: 'Open Sans'; margin-top: 76px"><a
                                     href="{{$slider->button_url}}"
                                     class="site-button-secondry btn-half"><span> {{$slider->button_text}}</span></a>
                             </div>
