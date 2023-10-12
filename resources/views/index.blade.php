@@ -17,7 +17,7 @@
                         data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                         data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="{{$slider->getFirstMediaUrl('image,','optimize')}}" data-bgcolor='#f8f8f8' style='' alt=""
+                        <img src="{{$slider->getFirstMediaUrl('image','optimize')}}" data-bgcolor='#f8f8f8' style='' alt=""
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                              data-bgparallax="off" class="rev-slidebg" data-no-retina>
 
