@@ -125,7 +125,7 @@
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <p class="in-p">{{ $setting->whatsapp }}</p>
+                                        <p class="in-p">{{ $setting->office_number }}</p>
                                     </div>
                                 </li>
                                 <li>

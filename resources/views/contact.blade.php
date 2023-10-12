@@ -48,7 +48,7 @@
                                 <p><i class="fa fa-phone" aria-hidden="true"></i> {{$setting->office_number}}</p>
                             </div>
                             <div class="whatssap">
-                                <p><i class="fa fa-whatsapp" aria-hidden="true"></i> {{$setting->whatsapp}}</p>
+                                <p><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="{{$setting->whatsapp}}">Whatsapp</a> </p>
                             </div>
                         </div>
                     </div>
