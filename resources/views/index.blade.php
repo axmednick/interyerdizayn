@@ -174,7 +174,7 @@
     <!-- SLIDER END -->
 
     <!-- START SECTION RECENTLY WORKS -->
-    <section class="recently portfolio bg-white-3">
+    <section class="recently portfolio bg-white-3 mt-5">
         <div class="container-fluid recently-slider">
             <div class="section-title">
                 <h3>@lang('content.recent_works_title')</h3>
