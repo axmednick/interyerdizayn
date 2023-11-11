@@ -45,7 +45,7 @@
                         </div>
                         <div class="in1">
                             <div class="phone">
-                                <p><i class="fa fa-phone" aria-hidden="true"></i> {{$setting->office_number}}</p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i> {{$setting->mobile_number}}</p>
                             </div>
                             <div class="whatssap">
                                 <p><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="{{$setting->whatsapp}}">Whatsapp</a> </p>

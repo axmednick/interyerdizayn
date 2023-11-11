@@ -24,14 +24,14 @@
                         <!-- LAYER 1  right image overlay dark-->
                         <div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-tobggroup"
                              id="slide-73-layer-1" data-x="['right','right','right','center']"
-                             data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
-                             data-voffset="['0','0','0','0']" data-fontweight="['100','100','400','400']"
+                             data-hoffset="['150','150','0','0']" data-y="['middle','middle','middle','middle']"
+                             data-voffset="['150','1500','0','0']" data-fontweight="['100','100','400','400']"
                              data-width="['full','full','full','full']" data-height="['full','full','full','full']"
                              data-whitespace="nowrap" data-type="shape" data-basealign="slide"
                              data-responsive_offset="off" data-responsive="off"
                              data-frames='[{"from":"opacity:0;","speed":1500,"to":"o:0;","delay":150,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power2.easeInOut"}]'
                              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[150,150,150,150]"
                              style="z-index: 6;text-transform:left;background-color:rgba(0,0,0,0.5);">
                         </div>
 
@@ -46,7 +46,7 @@
                              data-textAlign="['left','left','left','center']" data-paddingtop="[20,20,20,20]"
                              data-paddingright="[10,10,10,10]" data-paddingbottom="[0,0,0,0]"
                              data-paddingleft="[10,10,10,10]"
-                             style="z-index: 10; font-family: 'Poppins', sans-serif;">{{$loop->iteration}}</div>
+                             style="z-index: 10; font-family: 'Poppins', sans-serif; margin-left: 26px;">{{$loop->iteration}}</div>
 
                         <!-- LAYER 3  Thin text title-->
                         <div class="tp-caption   tp-resizeme slider-tag-line" id="slide-74-layer-3"
@@ -59,7 +59,7 @@
                              data-textAlign="['left','left','left','center']" data-paddingtop="[10,10,10,10]"
                              data-paddingright="[20,20,20,0]" data-paddingbottom="[10,10,10,10]"
                              data-paddingleft="[0,0,0,0]"
-                             style="z-index: 10; font-weight:200; letter-spacing:10px; color: #fff;font-family: 'Poppins', sans-serif; text-transform:uppercase">{{$slider->title}}</div>
+                             style="z-index: 10; font-weight:200; letter-spacing:10px; color: #fff;font-family: 'Poppins', sans-serif; text-transform:uppercase; margin-left: 30px;">{{$slider->title}}</div>
 
                         <!-- LAYER 4  Bold Title-->
                         <div class="tp-caption   tp-resizeme" id="slide-74-layer-4"
@@ -72,7 +72,7 @@
                              data-textAlign="['left','left','left','center']" data-paddingtop="[20,20,20,20]"
                              data-paddingright="[20,20,20,10]" data-paddingbottom="[30,30,30,30]"
                              data-paddingleft="[0,0,0,10]"
-                             style="z-index: 10; text-transform:uppercase; letter-spacing:10px; white-space: normal;font-weight: 600; color: #fff;font-family: 'Poppins', sans-serif; font-size: 10px !important;">{{$slider->sub_title}}</div>
+                             style=" margin-left: 30px;z-index: 10; text-transform:uppercase; letter-spacing:10px; white-space: normal;font-weight: 600; color: #fff;font-family: 'Poppins', sans-serif; font-size: 10px !important;">{{$slider->sub_title}}</div>
 
                         <!-- LAYER 5  Paragraph-->
                         <div class="tp-caption   tp-resizeme" id="slide-74-layer-5"
@@ -85,7 +85,7 @@
                              data-textAlign="['left','left','left','center']" data-paddingtop="[20,20,20,20]"
                              data-paddingright="[20,20,20,20]" data-paddingbottom="[30,30,30,30]"
                              data-paddingleft="[0,0,0,0]"
-                             style="z-index: 10; white-space: normal; color: #fff;font-family: 'Poppins', sans-serif;">{{$slider->description}}</div>
+                             style=" margin-left: 30px; z-index: 10; white-space: normal; color: #fff;font-family: 'Poppins', sans-serif;">{{$slider->description}}</div>
                         @if($slider->button_url && $slider->button_text)
                             <!-- LAYER 6  Read More-->
                             <div class="tp-caption rev-btn  tp-resizeme" id="slide-74-layer-6"
@@ -96,7 +96,7 @@
                                 {"delay":"wait","speed":500,"to":"y:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power1.easeIn"}]'
                                  data-textAlign="['left','left','left','center']" data-paddingtop="[0,0,0,0]"
                                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]" style="z-index:9; line-height:30px; font-family: 'Open Sans'; margin-top: 76px"><a
+                                 data-paddingleft="[0,0,0,0]" style=" margin-left: 30px; z-index:9; line-height:30px; font-family: 'Open Sans'; margin-top: 76px"><a
                                     href="{{$slider->button_url}}"
                                     class="site-button-secondry btn-half"><span> {{$slider->button_text}}</span></a>
                             </div>
