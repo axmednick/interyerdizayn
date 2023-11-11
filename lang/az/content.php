@@ -43,7 +43,7 @@ return [
     'info_help_description' => 'Niyə bizi seçməlisiniz Açıqlaması',
     'news_title' => 'Xəbərlər Başlığı',
     'news_read_more' => 'Ətraflı oxu',
-    'recent_works_title' => 'Son İşlərimiz',
+    'recent_works_title' => 'Layihələrimiz',
     'works' => 'Layihələr',
     'view_details' => 'Daha ətraflı',
     'why_choose_us_title' => 'Biz niyə seçməliyik',

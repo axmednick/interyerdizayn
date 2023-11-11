@@ -15,7 +15,7 @@
                         data-masterspeed="300" data-thumb="images/slider/p-1.jpg" data-rotate="0"
                         data-saveperformance="off" data-title="" data-param1="1" data-param2="" data-param3=""
                         data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
-                        data-param10="" data-description="">
+                        data-param10="" data-description="" style="">
                         <!-- MAIN IMAGE -->
                         <img src="{{$slider->getFirstMediaUrl('image','optimize')}}" data-bgcolor='#f8f8f8' style='' alt=""
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
@@ -39,7 +39,7 @@
                         <div class="tp-caption rev-btn  tp-resizeme slider-block sx-bg-primary" id="slide-73-layer-2"
                              data-x="['left','left','left','center']" data-hoffset="['60','60','30','0']"
                              data-y="['middle','middle','middle','top']" data-voffset="['-220','-220','-220','50']"
-                             data-fontweight="['600','600','600','600']" data-fontsize="['120','120','80','80']"
+                             data-fontweight="['600','600','600','600']" data-fontsize="['80','80','60','60']"
                              data-lineheight="['120','120','80','80']" data-height="none" data-whitespace="nowrap"
                              data-type="button" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},
                                 {"delay":"wait","speed":500,"to":"y:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power1.easeIn"}]'

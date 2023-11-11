@@ -4,7 +4,7 @@
     <section class="headings">
         <div class="text-heading">
             <div class="container">
-                <h1 class="text-center">{{ __('content.index') }}</h1>
+                <h1 class="text-center">{{ __('content.about') }}</h1>
             </div>
         </div>
     </section>
