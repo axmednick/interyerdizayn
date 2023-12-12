@@ -254,7 +254,7 @@
                             @lang('content.contact_us_description')
                         </p>
                         <div class="inf-btn pro">
-                            <a href="contact.html" class="btn btn-pro btn-secondary btn-lg">@lang('content.contact_us_button')</a>
+                            <a href="https://wa.me/994554444000" class="btn btn-pro btn-secondary btn-lg">@lang('content.contact_us_button')</a>
                         </div>
                     </div>
                 </div>
